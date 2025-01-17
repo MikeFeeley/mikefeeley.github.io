@@ -152,7 +152,17 @@
 <li><a href="#communication">Communication</a></li>
 <li><a href="#textbook">Textbook</a></li>
 <li><a href="#go-resources">Go Resources</a></li>
-<li><a href="#github-submission-instructions">GitHub Submission Instructions</a></li>
+<li><a href="#github-and-lab-submission">GitHub and Lab Submission</a>
+<ul>
+<li><a href="#syllabus-lecture-slides-etc">Syllabus, Lecture slides etc.</a></li>
+<li><a href="#starting-on-a-lab">Starting on a Lab</a>
+<ul>
+<li><a href="#step-by-step-instructions">Step-by-Step Instructions</a></li>
+</ul>
+</li>
+<li><a href="#submitting-lab-solutions">Submitting Lab Solutions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#schedule">Schedule</a>
@@ -251,11 +261,9 @@
 </tr>
 </tbody>
 </table>
-<div class="markdown-alert markdown-alert-note"><p class="markdown-alert-title"><svg class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p><p>Mike's office hours cancelled for Jan 15.</p>
-</div>
 <h2 id="communication">Communication</h2>
 <p><a href="https://piazza.com/ubc.ca/winterterm22024/cpsc416">Piazza</a> is the main place for formal, academic Q&amp;A and discussion with each other and with the teaching staff.</p>
-<p>Discord is a good place for informal, non-academic discussions with each other (without us there). Join via the following invite link <a href="https://discord.gg/eVBdewcn">https://discord.gg/eVBdewcn</a>.</p>
+<p>Discord is a good place for informal, non-academic discussions with each other (without us there). Join via the following invite link <a href="https://discord.gg/akzSjGmA">https://discord.gg/akzSjGmA</a>.</p>
 <h2 id="textbook">Textbook</h2>
 <p><a href="https://www.distributed-systems.net/index.php/books/ds4/ds4-ebook/"><em>Distributed Systems</em>. Van Steen, Maarten, and Andrew S. Tanenbaum.  4th edition, distributed-systems.net, 2023.</a></p>
 <h2 id="go-resources">Go Resources</h2>
@@ -272,13 +280,39 @@
 </ul>
 <p>Amanda Carbonan and Stewart Grant led an in-class Go tutorial in the 2017. Here is the recorded version: <a href="https://www.youtube.com/watch?v=L04p8SSmW-c&amp;t=1s">Part 1</a>, and <a href="https://www.youtube.com/watch?v=xAU1_chlGBA&amp;t=1786s">Part 2</a>.</p>
 <p>After you install the correct version of Go, you can now install an IDE of your choice. For example, <em>VS Code</em> provides good support for Go.  Another popular option is <em>JetBrain's GoLand</em> (free to students; <a href="https://www.jetbrains.com/student/">register here</a> with your UBC email).</p>
-<h2 id="github-submission-instructions">GitHub Submission Instructions</h2>
-<p>We will use an enterprise version of GitHub at UBC for all assignment/project code and writeup submissions.</p>
-<p>Log into <a href="https://github.students.cs.ubc.ca">github.students.cs.ubc.ca</a> and connect to the CPSC416-2024W-T2 organization, which contains two repositories: <strong>shared</strong> and <strong>students</strong>.  The <strong>shared</strong> repo contains lecture slides, sample code, and other similar information.  The <strong>students</strong> is a private repository where you and your lab partner will find lab starter code and where you will submit your solutions.</p>
-<p>Work inside your <strong>students</strong> lab repo as you would usually.</p>
+<h2 id="github-and-lab-submission">GitHub and Lab Submission</h2>
+<h3 id="syllabus-lecture-slides-etc">Syllabus, Lecture slides etc.</h3>
+<p>We will use an enterprise version of GitHub at UBC for all assignment/project code and writeup submissions. Log into <a href="https://github.students.cs.ubc.ca">github.students.cs.ubc.ca</a> and connect to the CPSC416-2024W-T2 organization.  Lecture slides, sample code, the syllabus and other resimilar information is found in the <strong>shared</strong> repository.</p>
+<h3 id="starting-on-a-lab">Starting on a Lab</h3>
+<p>Each group should create <strong>one</strong> private repo for each lab by following the <a href="#step-by-step-instructions">Step-by-Step Instructions</a> listed below.</p>
+<p>The repo must be named <code>labX_cwl0_cwl1</code> here<code>X</code> is the lab number (e.g., <code>1</code> or <code>4a</code>) and <code>cwl0</code> and <code>cwl1</code> are the CWL IDs of the two group members.</p>
+<p>The template contains instructions and starter code. Be sure to select that you want to include all template files, when you create your repo.</p>
+<h4 id="step-by-step-instructions">Step-by-Step Instructions</h4>
+<ol>
+<li>Go to <a href="https://github.students.cs.ubc.ca/organizations/CPSC416-2024W-T2/repositories/new">https://github.students.cs.ubc.ca/organizations/CPSC416-2024W-T2/repositories/new</a></li>
+<li>Under <code>Repository template</code> select <code>CPSC416-2024W-T2/labX</code> where<code>X</code> is the lab number (e.g., <code>1</code> or <code>4a</code>)</li>
+<li>Name the repository <code>labX_cwl0_cwl1</code> where <code>X</code> is the lab number and <code>cwl0</code> and <code>cwl1</code> are the CWL IDs of the two group members (e.g. lab1_alice_bob).</li>
+<li>Choose <strong>Private</strong></li>
+<li>Press <code>Create repository</code></li>
+<li>Give your partner <code>Write</code> access by selecting <code>Settings</code>, then selecting <code>Collaborators and teams</code>, then pressing <code>Add people</code>, and then entering their CWL ID and giving them <code>Write</code> privilages.</li>
+</ol>
+<div class="markdown-alert markdown-alert-warning"><p class="markdown-alert-title"><svg class="octicon octicon-alert mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Warning</p><p></p>
+<p>Ensure that your repo conforms to the following constraints.</p>
+<ol>
+<li>It is correctly named (see above).  Incorrectly named repos might not be marked.</li>
+<li>Your CWL is listed on exactly one repo. If there are duplicates, your grade might be based on whichever one the TAs find first.</li>
+<li>It is <strong>private</strong> and only you and your partner have access (and course staff, but we'll take care of that).</li>
+</ol>
+</div>
+<div class="markdown-alert markdown-alert-caution"><p class="markdown-alert-title"><svg class="octicon octicon-stop mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25A.749.749 0 0 1 11 16H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Caution</p><p></p>
+<p>YOU must be the owner of your repo.  Don't change this.  If you do, you might loose access to the repo.  In which case your only recourse will be to email Mike (<a href="mailto:feeley@cs.ubc.ca">feeley@cs.ubc.ca</a>), which is not ideal.</p>
+</div>
+<h3 id="submitting-lab-solutions">Submitting Lab Solutions</h3>
+<p>Work in your group's repo and push commits frequently.  We will grade your last commit.  If that commit occurred after the deadline, a late penalty of 2% per full hour will be apply.  The deadline for each Lab is 11:59pm on the designated deadline day.<br>
+So, for example, commits between 11:59pm and 12:59am receive no penalty.  Those between 1:00am and 11:59am receive 2%. And so on.</p>
 <div class="markdown-alert markdown-alert-important"><p class="markdown-alert-title"><svg class="octicon octicon-report mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p><p><strong>Push Commits Frequently.</strong></p>
 <p>You are required to show incremental changes to your code to demonstrate your evolving work product.</p>
-<p>We will mark the commit that immediately precedes the deadline, but we will also examine this history to see how your work evolved.</p>
+<p>While we grade your last commit, we will also examine this history to see how your work evolved.</p>
 <p>A single commit that contains a fully-formed solution will be flagged as suspicious and may result in a mark of zero for the lab and trigger an academic-integrity investigation.</p>
 </div>
 <h1 id="schedule">Schedule</h1>
@@ -490,7 +524,7 @@
 </tr>
 <tr>
 <td>J21</td>
-<td>Consistency</td>
+<td>RPC &amp; Consistency</td>
 <td></td>
 <td></td>
 <td></td>
@@ -511,7 +545,7 @@
 </tr>
 <tr>
 <td>J28</td>
-<td>Time</td>
+<td>Consistency &amp; Time</td>
 <td></td>
 <td></td>
 <td></td>
@@ -532,7 +566,7 @@
 </tr>
 <tr>
 <td>F04</td>
-<td>Replication</td>
+<td>Time &amp; Replication</td>
 <td></td>
 <td></td>
 <td></td>
@@ -736,14 +770,14 @@
 <tbody>
 <tr>
 <td>0</td>
-<td><a href="labs/00_go/README.html">Go...</a></td>
+<td><a href="labs/0_go/README.html">Go...</a></td>
 <td>J07</td>
 <td></td>
 <td>0%</td>
 </tr>
 <tr>
 <td>1</td>
-<td>RPC</td>
+<td><a href="labs/1_rpc/README.html">RPC</a></td>
 <td>J16</td>
 <td>J30</td>
 <td>16%</td>
@@ -821,20 +855,24 @@
 <tr>
 <th>Component</th>
 <th>Percentage</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Labs</td>
 <td>38%</td>
+<td>Late penalty is 2% per full hour</td>
 </tr>
 <tr>
 <td>Quizzes</td>
 <td>32%</td>
+<td></td>
 </tr>
 <tr>
 <td>Final</td>
 <td>30%</td>
+<td></td>
 </tr>
 </tbody>
 </table>
