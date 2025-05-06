@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Course Description</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <p><span style="font-size: 200%">CPSC 416: Distributed Systems    </span><span style="font-weight: 1">Syllabus - 2025 S</span></p>
+<ul>
+<li><a href="#course-description">Course Description</a>
+<ul>
+<li><a href="#learning-goals">Learning Goals</a></li>
+</ul>
+</li>
+<li><a href="#logistics">Logistics</a>
+<ul>
+<li><a href="#staff">Staff</a></li>
+<li><a href="#office-hours">Office Hours</a></li>
+<li><a href="#communication">Communication</a></li>
+<li><a href="#textbook">Textbook</a></li>
+<li><a href="#go-resources">Go Resources</a></li>
+<li><a href="#github-and-lab-submission">GitHub and Lab Submission</a>
+<ul>
+<li><a href="#syllabus-lecture-slides-etc">Syllabus, Lecture slides etc.</a></li>
+<li><a href="#starting-on-a-lab">Starting on a Lab</a>
+<ul>
+<li><a href="#step-by-step-instructions">Step-by-Step Instructions</a></li>
+</ul>
+</li>
+<li><a href="#submitting-lab-solutions">Submitting Lab Solutions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#schedule">Schedule</a>
+<ul>
+<li><a href="#topics">Topics</a></li>
+<li><a href="#calendar-subject-to-change-throughout-the-term">Calendar   (Subject to Change Throughout the Term)</a></li>
+<li><a href="#labs">Labs</a></li>
+<li><a href="#quizzes-and-final-exam">Quizzes and Final Exam</a></li>
+<li><a href="#grades">Grades</a></li>
+</ul>
+</li>
+<li><a href="#ubc-values-and-policies">UBC Values and Policies</a></li>
+<li><a href="#academic-integrity">Academic Integrity</a></li>
+</ul>
+<h1 id="course-description">Course Description</h1>
+<p><a href="https://en.wikipedia.org/wiki/Leslie_Lamport">Leslie Lamport</a>, a computer scientist who won the 2013 ACM Turing Award, gave the following definition of a distributed system.</p>
+<blockquote>
+<p>A distributed system is one in which the failure of a computer you didn't even know existed can render your own computer unusable.</p>
+</blockquote>
+<p>Yet, distribution provides numerous benefits. A system becomes more fault tolerant if there no single-points of failure or centralized components. By extending the system with more physical nodes the system gains performance and becomes more scalable, capable of handling more load. Distribution can also improve latency, by improving geographic diversity, by placing resources closer to clients who use the system.</p>
+<p>Achieving these benefits is not easy. As the quote above illustrates, distributed systems can fail in complex ways and these systems are more difficult to build, test, and understand than centralized systems.</p>
+<p>This course will introduce you to a broad range of topics in distributed systems. The topics are listed in the schedule below. For the most part this is a lecture-style course. However, distributed system concepts are notoriously challenging to internalize without first-hand experience. The emphasis of this course, therefore, will be on building distributed system prototypes, small and large.</p>
+<p>Course pre-requisites: CPSC 317 (networks) and CPSC 313 (computer hardware and operating systems).</p>
+<h2 id="learning-goals">Learning Goals</h2>
+<p>The course will provide an opportunity for students to:</p>
+<ul>
+<li>understand key principles in designing and implementing distributed systems;</li>
+<li>reason about problems that involve distributed components;</li>
+<li>become familiar with important techniques for solving problems that arise in distributed contexts; and</li>
+<li>build distributed system prototypes using the Go programming language.</li>
+</ul>
+<h1 id="logistics">Logistics</h1>
+<h2 id="staff">Staff</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Role</th>
+<th>Contact Info</th>
+<th>Office</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mike Feeley</td>
+<td>Instructor</td>
+<td><code>feeley@cs.ubc.ca</code></td>
+<td>ICCS 393</td>
+</tr>
+</tbody>
+</table>
+<h2 id="office-hours">Office Hours</h2>
+<table>
+<thead>
+<tr>
+<th>Who</th>
+<th>When</th>
+<th>Where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mike</td>
+<td>TBD</td>
+<td>Mike's office</td>
+</tr>
+</tbody>
+</table>
+<h2 id="communication">Communication</h2>
+<p><a href="TBD">Piazza</a> is the main place for formal, academic Q&amp;A and discussion with each other and with the teaching staff.</p>
+<p><a href="TBD">Discord</a> is a good place for informal, non-academic discussions with each other (without us there).</p>
+<h2 id="textbook">Textbook</h2>
+<p><a href="https://www.distributed-systems.net/index.php/books/ds4/ds4-ebook/"><em>Distributed Systems</em>. Van Steen, Maarten, and Andrew S. Tanenbaum.  4th edition, distributed-systems.net, 2023.</a></p>
+<h2 id="go-resources">Go Resources</h2>
+<p>In this course we will exclusively use the <a href="http://golang.org/">Go programming language</a> for all course work. Learning a new programming language is an important skill. You will practice it in this course. For the most part I will expect that you learn this language on your own. We will be using Go version 1.23.4 (available at /cs/local/bin/go on ugrad servers). If you use a personal machine, make sure to <a href="https://go.dev/dl/">install this exact version</a>. Though, please note that all homework solutions will be tested on the ugrad server machines.</p>
+<p>Go is a systems language originally introduced by Google. It is especially well suited to building distributed systems. Like with any language, the fastest way to become proficient at Go is to put in the time writing programs in Go. Here are some resources to get you started:</p>
+<ul>
+<li><a href="https://tour.golang.org/welcome/1">Go tutorial (start here)</a></li>
+<li><a href="https://golang.org/doc/code.html">How to Write Go Code</a></li>
+<li><a href="https://golang.org/doc/effective_go.html">Effective Go</a></li>
+<li><a href="https://gobyexample.com/">Go by Example</a></li>
+<li>The Go Programming Language <a href="https://go.dev/doc/">(Online)</a> <a href="https://www.amazon.ca/Go-Programming-Language-Alan-Donovan/dp/0134190440/ref=sr_1_1?crid=KHUPD50TD9NM&amp;dib=eyJ2IjoiMSJ9.hRBKL3GK8sS1T4rm8utVtmQ9jf6-jOdBvYBMIza19qJL9MzAKfW4s9UcPosjH_LxZEsG2X-4uafywnBNvR_wl4K5TCk7MAq_GsP0eeEEAIyfgtvO-BZ8WLC0d_DAwfZmy0dMFolKJzMAuWA_X4bm-hGIbL5LQ69sunti1SgjqzItPOmayGWkPaE5tCWFGGVqhOO5ceMjINxgdAr-eKuL7JU9O1PVMwqQ6FG4kGk83vCu5KPjjQ8bT8-0wBiooQ-rpj_7UDdq3vMyRjCBqxxif9V79ieGsl3ldOWz_gbnX34.YIo2Yf1eCuHjNLezTR9zMOlM9bzUpiyvpTzeYfI2dVY&amp;dib_tag=se&amp;keywords=the+go+programming+language&amp;qid=1732748001&amp;sprefix=the+go+programming+language%2Caps%2C137&amp;sr=8-1">(Book)</a></li>
+<li><a href="https://www.amazon.ca/Programming-Go-Creating-Applications-Developers-ebook/dp/B007Y6KDTG?ref_=ast_author_dp&amp;dib=eyJ2IjoiMSJ9.G3m9RY9JoMavdJ9607FHj26b4fdS-vIju_T4ULV74_WB1jGQdnLvp28NJP1THx4jBqFgO0b_pu6jW3s6eLmC2MBs7A2LS-ed2PXAqUsLtpAa8yjlE2KiTOcjjSDwJ7BmrCOGhan02DvHq5d3ywHniCu_jOY-8NYcp_z4eyUBy9WV8PrV9JggDMNl_Zojblwf-2R1Ehz07RkolkQthVpREQ.Es5Yzyum1brqZ7YFEAYPOCPoF1XxD2_v-sp1eN0OSIM&amp;dib_tag=AUTHOR">Programming in Go</a></li>
+<li><a href="https://go.dev/wiki/Learn">More Go resources</a></li>
+</ul>
+<p>Amanda Carbonan and Stewart Grant led an in-class Go tutorial in the 2017. Here is the recorded version: <a href="https://www.youtube.com/watch?v=L04p8SSmW-c&amp;t=1s">Part 1</a>, and <a href="https://www.youtube.com/watch?v=xAU1_chlGBA&amp;t=1786s">Part 2</a>.</p>
+<p>After you install the correct version of Go, you can now install an IDE of your choice. For example, <em>VS Code</em> provides good support for Go.  Another popular option is <em>JetBrain's GoLand</em> (free to students; <a href="https://www.jetbrains.com/student/">register here</a> with your UBC email).</p>
+<h2 id="github-and-lab-submission">GitHub and Lab Submission</h2>
+<h3 id="syllabus-lecture-slides-etc">Syllabus, Lecture slides etc.</h3>
+<p>We will use an enterprise version of GitHub at UBC for all assignment/project code and writeup submissions. Log into <a href="https://github.students.cs.ubc.ca">github.students.cs.ubc.ca</a> and connect to the CPSC416-2025S organization.  Lecture slides, sample code, the syllabus and other resimilar information is found in the <strong>shared</strong> repository.</p>
+<h3 id="starting-on-a-lab">Starting on a Lab</h3>
+<p>Each group should create <strong>one</strong> private repo for each lab by following the <a href="#step-by-step-instructions">Step-by-Step Instructions</a> listed below.</p>
+<p>The repo must be named <code>labX_cwl0_cwl1</code> here<code>X</code> is the lab number (e.g., <code>1</code> or <code>4a</code>) and <code>cwl0</code> and <code>cwl1</code> are the CWL IDs of the two group members.</p>
+<p>The template contains starter code. Be sure to select that you want to include all template files, when you create your repo.</p>
+<h4 id="step-by-step-instructions">Step-by-Step Instructions</h4>
+<ol>
+<li>Go to <a href="https://github.students.cs.ubc.ca/organizations/CPSC416-2025S/repositories/new">https://github.students.cs.ubc.ca/organizations/CPSC416-2025S/repositories/new</a></li>
+<li>Under <code>Repository template</code> select <code>CPSC416-2025S/labX</code> where<code>X</code> is the lab number (e.g., <code>1</code> or <code>4a</code>)</li>
+<li>Name the repository <code>labX_cwl0_cwl1</code> where <code>X</code> is the lab number and <code>cwl0</code> and <code>cwl1</code> are the CWL IDs of the two group members (e.g. lab1_alice_bob).</li>
+<li>Choose <strong>Private</strong></li>
+<li>Press <code>Create repository</code></li>
+<li>Give your partner <code>Write</code> access by selecting <code>Settings</code>, then selecting <code>Collaborators and teams</code>, then pressing <code>Add people</code>, and then entering their CWL ID and giving them <code>Write</code> privilages.</li>
+</ol>
+<div class="markdown-alert markdown-alert-warning"><p class="markdown-alert-title"><svg class="octicon octicon-alert mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Warning</p><p></p>
+<p>Ensure that your repo conforms to the following constraints.</p>
+<ol>
+<li>It is correctly named (see above).  Incorrectly named repos will be automatically deleted.</li>
+<li>It is <strong>private</strong> and only you and your partner have access (and course staff, but we'll take care of that).</li>
+<li>Your CWL is listed on exactly one repo. If there are duplicates, your grade might be based on whichever one the TAs find first.</li>
+</ol>
+</div>
+<h3 id="submitting-lab-solutions">Submitting Lab Solutions</h3>
+<p>Work in your group's repo and push commits frequently.  We will grade your last commit.  If that commit occurred after the deadline, a late penalty of 2% per full hour will be apply.  The deadline for each Lab is 11:59pm on the designated deadline day.  So, for example, commits between 11:59pm and 12:59am receive no penalty.  Those between 1:00am and 1:59am receive 2%. And so on.</p>
+<div class="markdown-alert markdown-alert-important"><p class="markdown-alert-title"><svg class="octicon octicon-report mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p><p><strong>Push Commits Frequently.</strong></p>
+<p>You are required to show incremental changes to your code to demonstrate your evolving work product.</p>
+<p>While we grade your last commit, we will also examine this history to see how your work evolved.</p>
+<p>A single commit that contains a fully-formed solution will be flagged as suspicious and may result in a mark of zero for the lab and trigger an academic-integrity investigation.</p>
+</div>
+<h1 id="schedule">Schedule</h1>
+<h2 id="topics">Topics</h2>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>Topic / Slides ‡</th>
+<th>Textbook</th>
+<th>Papers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><a href="lectures/0_intro/0_intro.pdf">Introduction</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td><a href="lectures/1_rpc/1_rpc.pdf">RPC</a></td>
+<td>§ 4.2, 8.3.2</td>
+<td><a href="lectures/1_rpc/papers/rpc.pdf">Implementing RPC</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="lectures/1_rpc/papers/grapevine.pdf">Grapevine</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="lectures/2_consistency/2_consistency.pdf">Consistency</a></td>
+<td>§ 7.1, 7.2.1, 7.2.3, 7.3</td>
+<td><a href="lectures/2_consistency/papers/linearizability.pdf">Linearizability</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="lectures/2_consistency/papers/release_consistency.pdf">Release Consistency</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="lectures/3_time/3_time.pdf">Time</a></td>
+<td>§ 5.2, 5.3.1-5.3.3</td>
+<td><a href="lectures/3_time/papers/time.pdf">Time, Clocks, and the Ordering of Events in a Distributed System</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="lectures/3_time/papers/clocks_easy.pdf">Why Logical Clocks are Easy</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="lectures/3_time/papers/upcalls.pdf">Upcalls</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="lectures/4_replication/4_replication.pdf">Replication</a></td>
+<td>§ 7.5.1, 7.5.5, 8.4</td>
+<td><a href="lectures/4_replication/papers/kaashoek.pdf">An Effective and Reliable Broadcast Protocol</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="lectures/4_replication/papers/isis.pdf">Lightweight Causal and Atomic Group Multicast</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="lectures/4_replication/papers/bayou.pdf">Bayou</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="lectures/5_consensus/5_consensus.pdf">Consensus</a></td>
+<td>§ 5.44, 8.1, 8.2</td>
+<td><a href="lectures/5_consensus/papers/paxos.pdf">PAXOS: The Partime Parliament</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="lectures/5_consensus/papers/paxos_simple.pdf">PAXOS Made Simple</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="lectures/5_consensus/papers/raft.pdf">Raft</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="lectures/5_consensus/papers/flp.pdf">FLP</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="lectures/5_consensus/papers/cap.pdf">CAP</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="lectures/6_transactions/6_transactions.pdf">Transactions</a></td>
+<td>§ 8.5</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="lectures/7_naming/7_naming.pdf">Naming</a></td>
+<td>§ 6.1-6.3</td>
+<td><a href="lectures/7_naming/papers/afs.pdf">AFS</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="lectures/7_naming/papers/chord.pdf">Chord</a></td>
+</tr>
+<tr>
+<td>8a</td>
+<td><a href="lectures/8a_dynamo/8a_dynamo.pdf">Dynamo</a></td>
+<td></td>
+<td><a href="lectures/8a_dynamo/papers/dynamo2007.pdf">Dynamo</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="lectures/8a_dynamo/papers/dynamodb2022.pdf">DynamoDB</a></td>
+</tr>
+<tr>
+<td>8b</td>
+<td><a href="lectures/8b_zookeeper/8b_zookeeper.pdf">ZooKeeper</a></td>
+<td></td>
+<td><a href="lectures/8b_zookeeper/papers/zookeeper.pdf">Zookeeper</a></td>
+</tr>
+<tr>
+<td>8c</td>
+<td><a href="lectures/8c_gfs/8c_gfs.pdf">GFS</a></td>
+<td></td>
+<td><a href="lectures/8c_gfs/papers/gfs.pdf">The Google File System</a></td>
+</tr>
+<tr>
+<td>9</td>
+<td><a href="lectures/9_byzantine/9_byzantine.pdf">Byzantine Failure</a></td>
+<td>§ 8.2.5</td>
+<td><a href="lectures/9_byzantine/papers/generals.pdf">Byzantine Generals</a></td>
+</tr>
+</tbody>
+</table>
+<p><em>‡ Slides can change up to day of lecture; check git for the latest version.</em></p>
+<h2 id="calendar-subject-to-change-throughout-the-term">Calendar   <span style="font-size: medium; font-weight: 1; font-style: italic">(Subject to Change Throughout the Term)</span></h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Topic</th>
+<th>Lab Released</th>
+<th>Lab Du e</th>
+<th>Quiz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>J03</td>
+<td><em>No Lecture</em></td>
+<td>Lab 0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>J08</td>
+<td>Intro &amp; RPC</td>
+<td>Lab 1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>J10</td>
+<td>RPC &amp; Consistency</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>J15</td>
+<td>Consistency &amp; Time</td>
+<td>Lab 2</td>
+<td>Lab 1</td>
+<td></td>
+</tr>
+<tr>
+<td>J17</td>
+<td>Time &amp; Replication</td>
+<td>Lab 3 ‡</td>
+<td>Lab 2 ‡</td>
+<td>Quiz 1</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>J22</td>
+<td>Replication &amp; Consensus</td>
+<td>Lab 4a ‡</td>
+<td>Lab 3</td>
+<td></td>
+</tr>
+<tr>
+<td>J24</td>
+<td>Consensus</td>
+<td>Lab 4b ‡</td>
+<td>Lab 4a ‡</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>J29</td>
+<td>Consensus &amp; Transactions</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>J31</td>
+<td>Transactions &amp; Naming</td>
+<td>Lab 4c</td>
+<td>Lab 4b</td>
+<td>Quiz 2</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>A05</td>
+<td>Dynamo &amp; Zookeeper</td>
+<td>Lab 5</td>
+<td>Lab 4c</td>
+<td></td>
+</tr>
+<tr>
+<td>A07</td>
+<td>GFS &amp; Byzantine Failure</td>
+<td></td>
+<td>Lab 5 ‡</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>‡ Some lab and dates are not on Tu/Th; actual dates shown below in <a href="#labs">Labs</a> <a href="#quizzes-and-final-exam">Quizzes</a> sections.</em></p>
+<h2 id="labs">Labs</h2>
+<table>
+<thead>
+<tr>
+<th>Lab</th>
+<th>Topic</th>
+<th>Released</th>
+<th>Due</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><a href="labs/0_go/README.html">Go...</a></td>
+<td>J03</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td><a href="labs/1_rpc/README.html">RPC</a></td>
+<td>J08</td>
+<td>J15</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="labs/2_time/README.html">Time</a></td>
+<td>J15</td>
+<td>J19</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="labs/3_replication/README.html">Replication</a></td>
+<td>J19</td>
+<td>J23</td>
+</tr>
+<tr>
+<td>4a</td>
+<td><a href="labs/4a_raft_leader/README.html">Raft: Leader Election</a></td>
+<td>J23</td>
+<td>J27</td>
+</tr>
+<tr>
+<td>4b</td>
+<td><a href="labs/4b_raft_logging/README.html">Raft: Logging</a></td>
+<td>J27</td>
+<td>J31</td>
+</tr>
+<tr>
+<td>4c</td>
+<td><a href="labs/4c_persistence">Raft: Persistence</a></td>
+<td>J31</td>
+<td>A05</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="labs/5_raft_kv/README.html">Key-Value Store (Using Raft)</a></td>
+<td>A05</td>
+<td>A08</td>
+</tr>
+</tbody>
+</table>
+<div class="markdown-alert markdown-alert-note"><p class="markdown-alert-title"><svg class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p><p></p>
+<p>If you work with a partner, both of you are (a) expected to contribute equally to each lab and (b) have a full understanding of, and an ability to explain <strong>all</strong> submitted code.  You must describe your individual contributions in the write for each lab.</p>
+</div>
+<h2 id="quizzes-and-final-exam">Quizzes and Final Exam</h2>
+<table>
+<thead>
+<tr>
+<th>Exam</th>
+<th>Date</th>
+<th>Topics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Quiz 1</td>
+<td>J17-J19</td>
+<td>RPC, Consistency, and Time</td>
+</tr>
+<tr>
+<td>Quiz 2</td>
+<td>J31-A02</td>
+<td>Replication and Consensus</td>
+</tr>
+<tr>
+<td>Final</td>
+<td>TBD</td>
+<td>Comprehensive</td>
+</tr>
+</tbody>
+</table>
+<p>Exams are closed-book.  Duration is 50 minutes for quizzes and 150 minutes for the final. All are administered online through <em>Prairie Test</em> in the Computer-Based Testing Facility (CBTF) at a self-scheduled time on the dates listed above.</p>
+<p>In accordance with University guidelines, final exam scores will not be visible during the final-exam period.  They will be posted to the <em>Prarie Learn</em> Gradebook on August 22, 2025 at which time all grade details, including course grades, will be posted to the course <em>Canvas</em> page.</p>
+<h2 id="grades">Grades</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Percentage</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Labs</td>
+<td>38%</td>
+<td>Late penalty is 2% per full hour</td>
+</tr>
+<tr>
+<td>Quizzes</td>
+<td>32%</td>
+<td>Improve to 80% of related Final exam questions</td>
+</tr>
+<tr>
+<td>Final</td>
+<td>30%</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="ubc-values-and-policies">UBC Values and Policies</h1>
+<p>UBC provides resources to support student learning and to maintain healthy lifestyles but recognizes that sometimes crises arise and so
+there are additional resources to access including those for survivors of sexual violence. UBC values respect for the person and ideas of
+all members of the academic community. Harassment and discrimination are not tolerated nor is suppression of academic
+freedom. UBC provides appropriate accommodation for students with disabilities and for religious and cultural observances. UBC
+values academic honesty and students are expected to acknowledge the ideas generated by others and to uphold the highest academic
+standards in all of their actions. Details of the policies and how to access support are available at <a href="https://senate.ubc.ca/policies-resources-support-student-success">https://senate.ubc.ca/policies-resources-support-student-success</a>.</p>
+<h1 id="academic-integrity">Academic Integrity</h1>
+<p>Labs can be completed in pairs.  You must not share any portion of your assignent with anyone other than your lab parter.  If you change parters part way through a lab, you must contact course staff for permission to share any part of your previous work with your new partner.</p>
+<p>You must not consult online or
+other resources that include any portion of a solution to a lab.  You must not use a tutor for help with a lab. You must not use large language model, generative AI tools (e.g., ChatGPT or GitHub Copilot) to write lab code.  All work that you submit must be entirely original to you and/or your partner unless you explicitly
+indicate otherwise and must not, for example, contain any generated code.</p>
+<p>Course material is provided for registered students only. You must not provide this material to
+anyone else in any form.</p>
+<p>Violation of these course rules constitutes academic misconduct. Other examples of misconduct
+and a more detailed description can be found on the <a href="https://my.cs.ubc.ca/docs/collaboration-plagiarism">department page on collaboration</a> and on the
+<a href="https://academicintegrity.ubc.ca/about-academic-integrity">University Academic Integrity page</a>.</p>
+
+            
+            
+        </body>
+        </html>
